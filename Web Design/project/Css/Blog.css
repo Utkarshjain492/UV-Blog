@@ -1,0 +1,24 @@
+.box-container {
+    margin-top: 7rem;
+    padding: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.box {
+    position: relative;
+    width: 26rem;
+    height: 15rem;
+    border-radius: 1rem;
+    overflow: hidden;
+}
+
+.real-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    cursor: pointer;
+}

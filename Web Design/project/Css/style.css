@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    user-select: none;
+}
+
+:root {
+    --body-color: #e4e9f7;
+    --white-color: #fff;
+    --black-color: #000;
+    --purple-color: #7d2efc;
+    --hot-pink: #ff00ff;
+    --red-color: #ff0000;
+    --royal-blue: #1717ff;
+    --hot-violet: #eb0feb;
+    --indigo-purple: #6316e0;
+}
+
+::selection {
+    background-color: var(--purple-color);
+    color: var(--white-color);
+}
+
+body {
+    background-color: var(--body-color);
+}
+
+&::-webkit-scrollbar {
+    display: none;
+}
+
+/* ============ ⁡⁣⁢⁣Global⁡⁡ ============ */
+.head {
+    display: grid;
+    place-items: center;
+    font-size: 1.6rem;
+    animation: heading 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+
+    #underline {
+        background-color: var(--purple-color);
+        width: 2.6rem;
+        height: .5rem;
+        border-radius: 1rem;
+    }
+}
+
+@keyframes heading {
+    from{
+        opacity: 0;
+        scale: .5;
+    }
+    to{
+        opacity: 1;
+        scale: 1;
+    }
+}
+
+.zenith-ui {
+    padding: 2rem;
+}
+
+#global___text {
+    font-weight: 900;
+    background: linear-gradient(45deg, var(--red-color), var(--royal-blue), var(--hot-violet), var(--indigo-purple));
+    background-size: 400% 400%;
+    -webkit-background-clip: text;
+    background-clip: value;
+    -webkit-text-fill-color: transparent;
+}
+
+/* ============ ⁡⁣⁢⁡⁣⁢⁣Home⁡⁡ ============ */
+#home {
+    display: grid;
+    place-items: center;
+    height: 95vh;
+    position: relative;
+
+    .inner___home {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+
+        .home___logo { font-size: 5rem; }
+
+        #check___blogs {
+            display: inline-block;
+            padding: .625rem 1.25rem;
+            color: var(--black-color);
+            font-size: 1.4rem;
+            border-radius: .3125rem;
+            border: .15rem solid var(--black-color);
+            text-decoration: none;
+            transition: background .3s;
+
+            &:hover {
+                color: var(--white-color);
+                background-color: var(--purple-color);
+                border: .15rem solid var(--purple-color);
+            }
+        }
+    }
+
+    .caption {
+        position: absolute;
+        bottom: 1rem;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-align: center;
+    }
+}
+
+/* ============ ⁡⁣⁢⁣About⁡⁡⁡ ============ */
+#about {
+    margin-top: 3rem;
+    display: grid;
+    place-items: center;
+    gap: 4.3rem;
+
+    .inner___about {
+        max-width: 70rem;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+
+        img {
+            width: 20rem;
+        }
+
+        p {
+            font-size: 1.3rem;
+            text-align: justify;
+            color: var(--black-color);
+        }
+    }
+}
+
+#zenithImg{
+    animation: lftToRgt 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+#zenithInfo{
+    animation: rgtToLft 5s linear;
+    animation-timeline: view();
+    animation-range: entry 0 cover 40%;
+}
+
+@keyframes lftToRgt {
+    from{
+        opacity: 0;
+        transform: translateX(-100px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+@keyframes rgtToLft {
+    from{
+        opacity: 0;
+        transform: translateX(200px);
+    }
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+/* ============ ⁡⁣⁢⁣Variants⁡⁡⁡⁡⁡ ============ */
+#variants {
+    margin-top: 3rem;
+    display: grid;
+    place-items: center;
+    padding: 2rem;
+    border-radius: 2rem;
+    border: .1rem solid var(--hot-pink);
+    background-color: #b700ff1e;
+    
+    .inner___variants {
+        max-width: 70rem;
+
+        .variants___points {
+            margin-top: 4rem;
+            display: grid;
+            color: var(--black-color);
+
+            li {
+                display: flex;
+                align-items: center;
+                gap: 4rem;
+                list-style: none;
+
+                h1 { font-size: 15rem; }
+
+                .variants___num {
+                    font-size: 1.2rem;
+
+                    h3 {
+                        font-size: 1.8rem;
+                        margin-bottom: .7rem;
+                    }
+
+                    p { text-align: justify; }
+                }
+            }
+
+            #variants_1,
+            #variants_3,
+            #variants_5 {
+                animation: lftToRgt 5s linear;
+                animation-timeline: view();
+                animation-range: entry 0 cover 40%;
+            }
+
+            #variants_2,
+            #variants_4 {
+                animation: rgtToLft 5s linear;
+                animation-timeline: view();
+                animation-range: entry 0 cover 40%;
+            }
+        }
+    }
+}
+
+/* ============ Admin⁡⁡⁡⁡⁡⁡ ============ */
+#admin {
+    margin-top: 3rem;
+    display: grid;
+    place-items: center;
+    gap: 6rem;
+
+    .inner___admin {
+        max-width: 70rem;
+        display: grid;
+        place-items: center;
+        gap: 7rem;
+
+        li {
+            display: flex;
+            align-items: center;
+            gap: 3rem;
+            font-size: 1.2rem;
+            list-style: none;
+
+            h2 { margin-bottom: 1rem; }
+        }
+
+        img {
+            width: 20rem;
+            border-radius: 2rem;
+            pointer-events: none;
+            border: .1rem solid var(--hot-pink);
+        }
+
+        #step_1{
+            animation: lftToRgt 5s linear;
+            animation-timeline: view();
+            animation-range: entry 0 cover 40%;
+        }
+
+        #step_2{
+            animation: rgtToLft 5s linear;
+            animation-timeline: view();
+            animation-range: entry 0 cover 40%;
+        }
+    }
+}
